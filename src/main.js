@@ -4,15 +4,27 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 
-function clearFields() {
-  $('#conversion_rates').val("");
-  $('.show-errors').text("");
+constructor(inputCurrency, inputAmount, conversionRateData) {
+  this.USD = conversionRateData.conversion_rates.USD,
+    this.GBP = conversionRateData.conversion_rates.GBP,
+    this.EUR = conversionRateData.conversion_rates.EUR,
+    this.SEK = conversionRateData.conversion_rates.SEK,
+    this.CNY = conversionRateData.conversion_rates.CNY,
+    this.RUB = conversionRateData.conversion_rates.RUB,
+    this.inputCurrency = inputCurrency,
+    this.inputAmount = inputAmount,
+    this.outputAmount = this.exchangeResults(this.inputCurrency, this.inputAmount)
 }
 
-function displayCurrencies(converion_rates) {
-  $('option value')
-
+exchangeResults(inputCurrency, inputAmount) {
+  let exchangeAmount = this[inputCurrency];
+  let result = exchangeAmount * inputAmount;
+  return result;
 }
+
+$(document).ready(function () {
+
+  $('#convert'
 
 // This is how my old project worked. I re-did it like this as I understand this method much better than how we learned. However I wanted to re-do it in a different way to prove to myself I could do it without aid.
 // $(document).ready(function () {
