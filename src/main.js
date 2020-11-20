@@ -10,7 +10,7 @@ function clearFields() {
 }
 
 function displayCurrencies(converion_rates) {
-  $('')
+  $('option value')
 
 
 
