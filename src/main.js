@@ -17,7 +17,7 @@ $(document).ready(function () {
     CurrencyService.getCurrency()
       .then(function (response) {
         newExchange = new ExchangeRates(inputCurrency, inputAmount, response)
-        $('#exchange_amount').append(`${newExchange.exchangeAmount(inputCurrency, inputAmount)} ${inputCurrency}`);
+        $('#exchange_amount').append(`${newExchange.exchangeResults(inputCurrency, inputAmount)} ${inputCurrency}`);
       });
   })
 });
