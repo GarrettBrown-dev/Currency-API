@@ -4,6 +4,16 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 
+function clearFields() {
+  $('#conversion_rates').val("");
+  $('.show-errors').text("");
+}
+
+function displayCurrencies(converion_rates) {
+  $('')
+
+
+
 // This is how my old project worked. I re-did it like this as I understand this method much better than how we learned. However I wanted to re-do it in a different way to prove to myself I could do it without aid.
 // $(document).ready(function () {
 //   const select = document.querySelectorAll('select');
