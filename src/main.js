@@ -12,7 +12,7 @@ function clearFields() {
 function displayCurrencies(converion_rates) {
   $('option value')
 
-
+}
 
 // This is how my old project worked. I re-did it like this as I understand this method much better than how we learned. However I wanted to re-do it in a different way to prove to myself I could do it without aid.
 // $(document).ready(function () {
