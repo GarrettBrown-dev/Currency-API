@@ -10,8 +10,8 @@ $(document).ready(function () {
   $('#convert').click(function (event) {
     event.preventDefault();
     let newExchange;
-    const inputCurrency = $('#input_currency').val();
-    const inputAmount = $('#input_amount').val();
+    const inputCurrency = ($('#currency2').val());
+    const inputAmount = parseInt($('#input_amount').val());
     $('#exchange_amount').html("Exchange Amount: ");
     $('#input_amount').val("");
     CurrencyService.getCurrency()
