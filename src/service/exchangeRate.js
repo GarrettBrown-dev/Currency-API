@@ -8,7 +8,7 @@ export class ExchangeRates {
       this.RUB = exchangeRateObject.conversion_rates.RUB,
       this.inputCurrency = inputCurrency,
       this.inputAmount = inputAmount,
-      this.outputAmount = this.exchangeResults(this.inputCurrency, this.inputAmount)
+      this.outputAmount = this.exchangeResults(this.inputCurrency, this.inputAmount);
   }
 
   exchangeResults(inputCurrency, inputAmount) {
