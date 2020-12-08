@@ -12,8 +12,12 @@ export class ExchangeRates {
   }
 
   exchangeResults(inputCurrency, inputAmount) {
+    if(inputCurrency === [inputCurrency]) {
+       throw "Error! Please enter a valid currency!";
+    } else {
     let exchangeAmount = this[inputCurrency];
     let result = exchangeAmount * inputAmount;
-    return result;
+      return result;
+    }
   }
 }
