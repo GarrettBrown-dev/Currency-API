@@ -19,7 +19,6 @@ $(document).ready(function () {
         if (inputAmount < 0 || inputAmount == "") throw "Error! Please enter a valid amount!";
         newExchange = new ExchangeRates(inputCurrency, inputAmount, response);
         $('#exchange_amount').append(`${newExchange.exchangeResults(inputCurrency, inputAmount)} ${inputCurrency}`);
-        if (status != 200) throw "Error! Something went wrong retrieving the information";
       });
   });
 });
