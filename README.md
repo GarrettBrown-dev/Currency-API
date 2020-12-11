@@ -25,7 +25,6 @@ _This is intended as a proof of knowledge for week 6 at Epicodus. It shows knowl
 * _Get a free (or paid) key by inputting your email when prompted._
 * _Place your new API key in all spots where "API *underscore* Key" is used, as well as create a new .env file with the following line of code:_ API_KEY=your-api-key-goes-here
 * _Be sure to run npm install and npm run start to ensure you have the necessary files!_
-* _It is also very important to 
 
 ## Known Bugs:
 
