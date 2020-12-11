@@ -14,13 +14,7 @@ export class ExchangeRates {
   exchangeResults(inputCurrency, inputAmount) {
     const exchangeAmount = this[inputCurrency];
     const result = exchangeAmount * inputAmount;
-    if (isNaN(result))
-    {
-      return ("Error! Please enter a valid currency!");
-    }
-    else
-    {
-      return result;
-    }
+    return result;
   }
 }
+

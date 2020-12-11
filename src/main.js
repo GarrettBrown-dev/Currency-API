@@ -20,6 +20,10 @@ $(document).ready(function () {
         {
           $('#error_message').append("Error! Please enter a valid amount!");
         }
+        else if (isNaN(response.conversion_rates[inputCurrency]))
+        {
+          $('#error_message').append("Error! Please enter a valid currency!");
+        }
         else
         {
           newExchange = new ExchangeRates(inputCurrency, inputAmount, response);
