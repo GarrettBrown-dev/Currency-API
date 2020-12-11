@@ -12,12 +12,15 @@ export class ExchangeRates {
   }
 
   exchangeResults(inputCurrency, inputAmount) {
-    if(!this[inputCurrency]) {
-      throw "Error! Please enter a valid currency!";
-    }
-
     const exchangeAmount = this[inputCurrency];
     const result = exchangeAmount * inputAmount;
-    return result;
+    if (isNaN(result))
+    {
+      return ("Error! Please enter a valid currency!");
+    }
+    else
+    {
+      return result;
+    }
   }
 }

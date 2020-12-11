@@ -6,7 +6,7 @@ export default class CurrencyService {
       })
       .catch(function (error) {
         alert(error.message);
-        throw new Error(error);
+        return new Error(error);
       });
   }
 }

@@ -16,9 +16,15 @@ $(document).ready(function () {
     $('#input_amount').val("");
     CurrencyService.getCurrency()
       .then(function (response) {
-        if (inputAmount < 0 || inputAmount == "") throw "Error! Please enter a valid amount!";
-        newExchange = new ExchangeRates(inputCurrency, inputAmount, response);
-        $('#exchange_amount').append(`${newExchange.exchangeResults(inputCurrency, inputAmount)} ${inputCurrency}`);
+        if (inputAmount <= 0 || inputAmount == "")
+        {
+          $('#error_message').append("Error! Please enter a valid amount!");
+        }
+        else
+        {
+          newExchange = new ExchangeRates(inputCurrency, inputAmount, response);
+          $('#exchange_amount').append(`${newExchange.exchangeResults(inputCurrency, inputAmount)} ${inputCurrency}`);
+        }
       });
   });
 });
